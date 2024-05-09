@@ -107,6 +107,18 @@ repositories {
         name 'CleanroomMC Maven'
         url 'https://maven.cleanroommc.com'
     }
+    maven {
+        // RetroFuturaGradle
+        name "GTNH Maven"
+        url "https://nexus.gtnewhorizons.com/repository/public/"
+        mavenContent {
+            includeGroup("com.gtnewhorizons")
+            includeGroupByRegex("com\\.gtnewhorizons\\..+")
+        }
+    }
+    gradlePluginPortal()
+    mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
